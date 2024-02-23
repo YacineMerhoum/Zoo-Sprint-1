@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+
+:root {
+    --cards-height: 400px;
+    --cards-width: calc(var(--cards-height) / 1.5);
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    
+    
+    
+  }
+  .cards {
+    width: var(--cards-width);
+    height: var(--cards-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin:  20px;
+    
+  }
+  
+  .cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .cards:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  }
+  
+  .wrapper::before,
+  .wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+  }
+  .wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+      to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+  }
+  .wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+  }
+  
+  .cards:hover .wrapper::before,
+  .wrapper::after {
+    opacity: 1;
+  }
+  
+  .cards:hover .wrapper::after {
+    height: 120px;
+  }
+  .title {
+    width: 100%;
+    transition: transform 0.5s;
+  }
+  .cards:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+  }
+  
+  .character {
+    
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+    
+  }
+  
+  .cards:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+    transition: 1s;
+    
+  }
+  .imageTigre {
+  transition: 1s !important;
+  opacity: 0.1 !important;
+}
+
+
+  
+  /* .buttonAnimal:hover .character {
+    opacity: 0.2 ;
+  } */
+  
+  h5 {
+    font-size: 50px;
+    text-align: center;
+    font-family: "Honk", system-ui;
+  }
+  .container {
+    position: relative;
+    display: inline-block;
+}
+
+.cover-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.card-text-overlay {
+    position: absolute;
+    top: 2px;
+    left: 64px;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 30px;  
+}
+
+
+.card-text {
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    
+}
+
+/* ///tentative d'animation a la liberation animal*/
+
+.liberer-animation {
+  animation: inputCreate 2s ease 0s 1 normal forwards;
+}
+
+@keyframes inputCreate {
+  0% {
+      opacity: 1;
+      transform: scale(1);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(0.6);
+  }
+}
+.cards {
+  animation: cards 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes cards {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}

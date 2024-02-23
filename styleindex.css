@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Lilita+One&display=swap');
+
+body {
+    background-image: url(./medias/wp7151292-disney-4k-wallpapers.jpg);
+    animation: backgroundSlide 15s linear infinite alternate;
+    background-repeat: repeat-x;
+    background-size: 110% auto;
+}
+@keyframes backgroundSlide {
+  from {
+    background-position: 100% 0;
+}
+to {
+    background-position: 0 0;
+}
+}
+
+.navbar {
+    background: linear-gradient(to left, #3b35e7, #3498db,#e12ae4);
+    animation: navbarSlide 5s linear infinite alternate;
+    background-size: 200% auto;
+    font-family: "Honk", system-ui;    
+}
+@keyframes navbarSlide {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+.divtitle{
+    margin-top: 190px;
+    
+}
+.logo{
+    height: 60px;
+    width: 150px;
+}
+.welcome{
+    font-family: "Honk", system-ui;
+    font-size: 7rem;
+    
+}
+.leBouton{
+    margin-top: 150px;
+    font-size: 60px !important;
+    font-family: "Lilita One", sans-serif !important;
+    color: white !important;
+    text-decoration: none !important;
+ 
+}
+.card{
+    font-family: "Lilita One", sans-serif;
+    font-size: 40px;
+    height: 70px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: black !important;
+    
+}
+.card:hover{
+    transform: translateY(-5px);
+    
+}
+.no-underline {
+    text-decoration: none;
+    color: black;
+}
+.no-underline:hover{
+    color: brown;
+}
+
+.cardAnimal{
+  font-size: 25px;
+  height: 550px;
+  margin: 5px;
+  
+
+}
+
+
+/* CSS BUTTON */
+.button-57 {
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  overflow: hidden;
+  
+}
+
+.button-57:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button-57:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button-57 {
+    padding: 16px 48px;
+  }
+}
+
+/* ANIMATION TITRE SCALE3D */
+.titleAnimation {
+  animation: titleAnim 3s ease 0s  normal forwards;
+}
+@keyframes titleAnim {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	40% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	50% {
+		transform: scale3d(0.85, 1.15, 1);
+	}
+
+	65% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	75% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+.buttonAnim{
+  animation-delay: 3s;
+  animation: buttonAnim 2s ease 3s   normal forwards ;
+}
+@keyframes buttonAnim {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(-6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(-2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(1.2deg);
+	}
+}
+.applestore{
+  margin-top: 150px;
+  
+}
+.apple{
+  background-color: white;
+  border-radius: 10%;
+  border: black solid 2px;
+  display: none;
+  animation: applestore 2s ease 0s 1 normal forwards;
+  transition: 1s;
+}
+@keyframes applestore {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+
+.apple:hover{
+  transition: 1s;
+  transform: scale(1.2);
+}
+
+
+
+
+

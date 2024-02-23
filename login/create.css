@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Lilita+One&display=swap');
+body {
+    background-image: url(../medias/loader.jpg);
+}
+
+.css-input {
+    padding: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    border-width: 12px;
+    border-color: #cc87f2;
+    background-color: transparent;
+    color: white;
+    border-style: inset;
+    border-radius: 44px;
+    box-shadow: 0px 0px 22px rgba(66,66,66,.75);
+    text-shadow: 0px 0px 10px rgba(66,66,66,.62);
+}
+.css-input:focus {
+    outline:none;
+}
+.inputconnexion{
+    margin-top: 17%;
+    margin-left: 40%;
+    animation: inputCreate 1.5s ease 2s 1 normal forwards;
+}
+@keyframes inputCreate {
+	0% {
+		transform: scale(0.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* button */
+.original-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 85px;
+  margin-top: 40px;
+  text-decoration: none;
+  color: #cc87f2;
+  font-size: 30px;
+  font-family: "Lilita One", sans-serif ;
+  width: 200px;
+  height: 40px;
+  position: relative;
+  transition: 0.3s;
+  overflow: hidden;
+  background-color: transparent;
+  border: transparent;
+}
+
+.original-button::before, .original-button::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #cc87f2;
+  transition: .3s;
+}
+
+.original-button::before {
+  top: 0;
+}
+
+.original-button::after {
+  bottom: 0;
+}
+
+.original-button:hover::before {
+  transform: translateX(-100%);
+}
+
+.original-button:hover::after {
+  transform: translateX(100%);
+}
+.textinput{
+    color: #cc87f2;
+    font-size: 3rem;
+    margin-left: 68px;
+    margin-bottom: 25px;
+    
+    
+}
+
+#monH1{
+    color: #cc87f2;
+    font-size: 3rem;
+    display: none;
+    margin-right: 65%;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.text-anim{
+    color: #cc87f2;
+    font-size: 3rem;
+    margin-right: 65%;
+    background-color: black;
+    border-radius: 25%;
+    text-align: center;
+    z-index: 999;
+
+}
