@@ -140,74 +140,74 @@ setInterval(() => {
 
 
 
-// // AJAX DU NOUVEL ANIMAL 
-// let create = document.querySelector("#createAnimal")
-// create.addEventListener("submit" , async function(event){
-//     console.log(create);
-//     event.preventDefault()
+// AJAX DU NOUVEL ANIMAL 
+let create = document.querySelector("#createAnimal")
+create.addEventListener("submit" , async function(event){
+    console.log(create);
+    event.preventDefault()
 
-//     const createInput = document.querySelector("#creation").value
-//     let formData = new FormData()
-//     formData.append("nameAnimal" , createInput)
+    const createInput = document.querySelector("#creation").value
+    let formData = new FormData()
+    formData.append("nameAnimal" , createInput)
     
 
-//     fetch("pageTigres.php" , {
-//         method: "POST",
-//         body: formData
+    fetch("pageTigres.php" , {
+        method: "POST",
+        body: formData
 
-//     }).then((response)=>{
-//         return response.json()
-//     }).then((data)=>{
-//         console.log(data);
+    }).then((response)=>{
+        return response.json()
+    }).then((data)=>{
+        console.log(data);
         
-//         let creation = document.querySelector("#cardJs")
-//         creation.innerHTML += `
-//         <div class="d-flex align-items-start">
-//             <div class="cards" id="animal-">
-//                 <div class="wrapper">
+        let creation = document.querySelector("#cardJs")
+        creation.innerHTML += `
+        <div class="d-flex align-items-start">
+            <div class="cards" id="animal-">
+                <div class="wrapper">
 
-//                     <img src="../medias/1992-rajah-01.jpg" class="cover-image" >
-//                     <div class="card-text-overlay">
-//                         <p class="card-text">Age : ${data.age}</p>
-//                         <p class="card-text">Poids : 10 </p>
-//                         <p class="card-text">Taille : 1 </p>
-//                         <p class="card-text">Appêtit : </p>
-//                         <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-//                             <div class="progress-bar bg-success progress-hungry-" style="width: ${data.appetit}%">${data.appetit}%</div>
-//                         </div>
-//                         <p class="card-text">Propreté : </p>
-//                         <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-//                             <div class="test progress-bar bg-info progress-clean-
-//                             " style="width: ${data.proprete}%">${data.proprete}%</div>
-//                         </div>
-//                     </div>
+                    <img src="../medias/1992-rajah-01.jpg" class="cover-image" >
+                    <div class="card-text-overlay">
+                        <p class="card-text">Age : ${data.age}</p>
+                        <p class="card-text">Poids : 10 </p>
+                        <p class="card-text">Taille : 1 </p>
+                        <p class="card-text">Appêtit : </p>
+                        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-success progress-hungry-" style="width: ${data.appetit}%">${data.appetit}%</div>
+                        </div>
+                        <p class="card-text">Propreté : </p>
+                        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            <div class="test progress-bar bg-info progress-clean-
+                            " style="width: ${data.proprete}%">${data.proprete}%</div>
+                        </div>
+                    </div>
 
-//                 </div>
-//                 <h5 class="title"> ${data.name}</h5>
-//                 <img src="../medias/iconetigre-removebg-preview.png" id="raja"  class="character" />
-//                 <div class="character d-flex justify-content-between ">
+                </div>
+                <h5 class="title"> ${data.name}</h5>
+                <img src="../medias/iconetigre-removebg-preview.png" id="raja"  class="character" />
+                <div class="character d-flex justify-content-between ">
 
-//             <form method="post" id="wash">
-//             <input type="hidden" name="clean" id="getWash" value="${data.id}">
-//             <button type="submit"  class="buttonAnimal text-white btn btn-info p-2">Nettoyer</button>
-//             </form>
+            <form method="post" id="wash">
+            <input type="hidden" name="clean" id="getWash" value="${data.id}">
+            <button type="submit"  class="buttonAnimal text-white btn btn-info p-2">Nettoyer</button>
+            </form>
 
-//             <form method="post" id="allEat">
-//             <input type="hidden" id="getEat" name="nourir" value="${data.id}">
-//             <button type="submit" class="buttonAnimal btn btn-success p-2">Nourrir</button>
-//             </form>
+            <form method="post" id="allEat">
+            <input type="hidden" id="getEat" name="nourir" value="${data.id}">
+            <button type="submit" class="buttonAnimal btn btn-success p-2">Nourrir</button>
+            </form>
             
-//             <form method="post" id="monFormulaire">
-//                 <input type="hidden" name="id" id="getId" value="${data.id}">
-//                 <button id="libererBtn" type="submit" class="buttonAnimal btn btn-danger p-2">Libérer</button>
-//             </form>
+            <form method="post" id="monFormulaire">
+                <input type="hidden" name="id" id="getId" value="${data.id}">
+                <button id="libererBtn" type="submit" class="buttonAnimal btn btn-danger p-2">Libérer</button>
+            </form>
             
-//             </div>
-//         </div>
-//     </div>
+            </div>
+        </div>
+    </div>
         
-//         `
+        `
         
         
-//     })
-// });
+    })
+});

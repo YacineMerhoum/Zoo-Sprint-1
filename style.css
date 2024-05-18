@@ -3,6 +3,7 @@
 
 body {
     background-image: url(./medias/movie-the_lion_king_1994-264144.jpeg);
+    
 
 }
 
@@ -304,4 +305,20 @@ body {
 		background-position: right top;
 		background-size: 150%;
 	}
+}
+
+/* RESPONSIVE  */
+@media (max-width: 768px) {
+  .welcome {
+    font-size: 2rem !important;
+    }
+    .card {
+      font-size: 25px;
+    }
+    .bienvenue{
+      font-size: 15px;
+    }
+    .pseudo {
+      font-size: 20px;
+    }
 }

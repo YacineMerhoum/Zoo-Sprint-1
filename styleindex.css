@@ -228,3 +228,18 @@ to {
 
 
 
+@media (max-width: 768px) {
+  .welcome {
+    font-size: 3rem;
+    }
+    body {
+      background-image: url(./medias/wp7151292-disney-4k-wallpapers.jpg);
+      background-size: auto;
+      
+       
+  }
+  .leBouton {
+    height: auto;
+  }
+    
+}

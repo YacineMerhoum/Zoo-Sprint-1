@@ -1,49 +1,63 @@
 /* LOADER DE 2,5s */
 #loader {
-    background-image: url(./medias/loader.jpg);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.7); 
-    z-index: 9999; 
-    transition: opacity 0.5s ease-out; 
-    display: none;
-    animation: TestLoader 0.2s ease 0s 1 normal forwards;
-    
-  }
-  @keyframes TestLoader {
-	0% {
-		opacity: 0;
-		transform: scale(1.4);
-	}
-
-	100% {
-		opacity: 1;
-		transform: scale(1);
-	}
+  background-image: url(./medias/loader.jpg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+  display: none;
+  animation: TestLoader 0.2s ease 0s 1 normal forwards;
 }
 
+@keyframes TestLoader {
+  0% {
+      opacity: 0;
+      transform: scale(1.4);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.textLoader {
+  margin-top: 10%;
+  margin-left: 10%;
+  color: #ab71e1;
+  font-family: "Lilita One", sans-serif !important;
+  font-size: 7rem;
+  animation: loading 1s ease 0s 3 normal forwards;
+}
+
+@keyframes loading {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.2;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Responsive  */
+@media (max-width: 768px) {
   .textLoader {
-    margin-top: 10%;
-    margin-left :10%;
-    color: #ab71e1;
-    font-family: "Lilita One", sans-serif !important;
-    font-size: 7rem;
-    animation: loading 1s ease 0s 3 normal forwards;
-  
+      font-size: 3rem; 
+      margin-top: 20%; 
+      margin-left: 5%; 
   }
-  @keyframes loading {
-      0% {
-          opacity: 1;
-      }
-  
-      50% {
-          opacity: 0.2;
-      }
-  
-      100% {
-          opacity: 1;
-      }
+}
+
+@media (max-width: 480px) {
+  .textLoader {
+      font-size: 2rem; 
+      margin-top: 30%; 
+      margin-left: 5%; 
   }
+}
